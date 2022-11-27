@@ -21,9 +21,10 @@ export default {
     },
     {
       id: 3,
-      image: require('../assets/carousel/carousel4.webp'),
-      description: '2022  •  2 Languages •  Drama  •  Procedural  •  Legal',
-      logo: require('../assets/carousel/carousel-text-4.webp'),
+      image: require('../assets/carousel/sample.jpg'),
+      description:
+        '2022  •  English •  Superhero  •  Fantasy  •  Romance  • Comedy',
+      logo: require('../assets/carousel/carousel-text-4.png'),
     },
     {
       id: 4,
@@ -98,6 +99,58 @@ export default {
     {
       id: 9,
       moviePoster: require('../assets/movie-poster/movie10.webp'),
+    },
+  ],
+  searchList: [
+    {
+      id: 0,
+      cover: require('../assets/search/search-1.jpg'),
+      title: 'Thor: Love and Thunder',
+    },
+    {
+      id: 1,
+      cover: require('../assets/search/search-2.jpg'),
+      title: 'Star Wars: Andor',
+    },
+    {
+      id: 2,
+      cover: require('../assets/search/search-3.jpg'),
+      title: 'Disenchanted',
+    },
+    {
+      id: 3,
+      cover: require('../assets/search/search-4.jpg'),
+      title: 'BTS: PERMISSION TO DANCE ON STAGE - LA',
+    },
+    {
+      id: 4,
+      cover: require('../assets/search/search-5.jpg'),
+      title: 'Big Mouth',
+    },
+    {
+      id: 5,
+      cover: require('../assets/search/search-6.jpg'),
+      title: 'The Gangs, the Oscars, and the Walking Dead',
+    },
+    {
+      id: 6,
+      cover: require('../assets/search/search-7.jpg'),
+      title: 'Attack on Titan',
+    },
+    {
+      id: 7,
+      cover: require('../assets/search/search-8.jpg'),
+      title: 'The Kardashians: An ABC News Special',
+    },
+    {
+      id: 8,
+      cover: require('../assets/search/search-9.jpg'),
+      title: 'Lightyear',
+    },
+    {
+      id: 9,
+      cover: require('../assets/search/search-10.jpg'),
+      title: 'SPYxFAMILY',
     },
   ],
 };

@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import COLORS from '../constants/COLORS';
@@ -12,13 +12,19 @@ const StickyFooter = ({}) => {
         colors={['#202227', '#212329']}
         style={{borderRadius: 100}}>
         <View className="justify-center items-center px-4 py-2 rounded-full flex-row space-x-3">
-          <Text className="text-white font-RobotoMedium text-xs">Series</Text>
-          <Text className="text-white font-RobotoMedium text-xs">|</Text>
-          <Text className="text-white font-RobotoMedium text-xs">Movies</Text>
-          <Text className="text-white font-RobotoMedium text-xs">|</Text>
-          <Text className="text-white font-RobotoMedium text-xs">
-            Originals
-          </Text>
+          <TouchableOpacity>
+            <Text className="text-white font-RobotoMedium text-xs">Series</Text>
+          </TouchableOpacity>
+          <View className="h-full w-[1px] bg-white" />
+          <TouchableOpacity>
+            <Text className="text-white font-RobotoMedium text-xs">Movies</Text>
+          </TouchableOpacity>
+          <View className="h-full w-[1px] bg-white" />
+          <TouchableOpacity>
+            <Text className="text-white font-RobotoMedium text-xs">
+              Originals
+            </Text>
+          </TouchableOpacity>
         </View>
       </LinearGradient>
     </LinearGradient>

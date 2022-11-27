@@ -4,16 +4,12 @@ import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo';
 import COLORS from '../constants/COLORS';
 
-const StickyHeader = ({minHeight, backgroundColor}) => {
+const StickyHeader = ({minHeight}) => {
   return (
     <LinearGradient
-      colors={
-        backgroundColor
-          ? [COLORS.primary, COLORS.primary]
-          : [COLORS.black, 'transparent']
-      }
+      colors={[COLORS.black, 'transparent']}
       className="opacity-95  items-center flex-row space-x-2 pl-2"
-      style={{height: minHeight, backgroundColor: backgroundColor}}>
+      style={{height: minHeight}}>
       <View className="w-16 h-14 justify-center items-center">
         <Image
           source={require('../assets/logo/disney-plus-logo.png')}
@@ -23,7 +19,7 @@ const StickyHeader = ({minHeight, backgroundColor}) => {
       </View>
 
       <View className="pt-3 items-center flex-row">
-        <Text className="text-yellow-500 text-center font-RobotoMedium text-xs">
+        <Text className="text-yellow-500 text-center font-RobotoBold text-xs">
           Subscribe
         </Text>
         <Entypo

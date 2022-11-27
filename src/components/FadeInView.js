@@ -10,12 +10,12 @@ const FadeInView = props => {
   useFocusEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 300,
+      duration: 150,
       useNativeDriver: true,
     }).start();
 
     Animated.timing(viewRef, {
-      toValue: props.isHome ? 0 : -15,
+      toValue: props.isHome ? 0 : -16,
       duration: 200,
       useNativeDriver: true,
     }).start();
@@ -23,7 +23,7 @@ const FadeInView = props => {
     return () => {
       Animated.timing(fadeAnim, {
         toValue: 0,
-        duration: -width,
+        duration: 200,
         useNativeDriver: true,
       }).start();
 
@@ -40,8 +40,8 @@ const FadeInView = props => {
       <Animated.View // Special animatable View
         style={{
           flex: 1,
-          marginLeft: props.isHome ? 0 : 15,
-          // marginRight: props.isHome ? 15 : 0,
+          marginLeft: props.isHome ? 0 : 16,
+          // marginRight: props.isHome ? 16 : 0,
           transform: [
             {
               translateX: viewRef,
