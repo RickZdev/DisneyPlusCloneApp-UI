@@ -1,4 +1,6 @@
 export default {
+  disneyLogo: require('../assets/logo/disney-plus-logo.png'),
+  avatar: require('../assets/images/moon-knight-avatar.webp'),
   carousel: [
     {
       id: 0,
@@ -37,26 +39,32 @@ export default {
     {
       id: 0,
       logo: require('../assets/logo/disney-logo.png'),
+      video: require('../assets/videos/disney-opening.mp4'),
     },
     {
       id: 1,
       logo: require('../assets/logo/pixar-logo.png'),
+      video: require('../assets/videos/pixar-opening.mp4'),
     },
     {
       id: 2,
       logo: require('../assets/logo/marvel-logo.png'),
+      video: require('../assets/videos/marvel-opening.mp4'),
     },
     {
       id: 3,
       logo: require('../assets/logo/starwars-logo.png'),
+      video: require('../assets/videos/starwars-opening.mp4'),
     },
     {
       id: 4,
       logo: require('../assets/logo/nationalgeo-logo.png'),
+      video: require('../assets/videos/natgeo-opening.mp4'),
     },
     {
       id: 5,
       logo: require('../assets/logo/star-logo.png'),
+      video: require('../assets/videos/star-opening.mp4'),
     },
   ],
   newToDisney: [

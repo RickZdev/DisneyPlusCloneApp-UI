@@ -1,11 +1,10 @@
-import * as React from 'react';
-import {Animated, Dimensions, View} from 'react-native';
+import {useRef} from 'react';
+import {Animated, View} from 'react-native';
 import {useFocusEffect} from '@react-navigation/native';
 
 const FadeInView = props => {
-  const {width} = Dimensions.get('window');
-  const viewRef = React.useRef(new Animated.Value(0)).current;
-  const fadeAnim = React.useRef(new Animated.Value(0)).current;
+  const viewRef = useRef(new Animated.Value(0)).current;
+  const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useFocusEffect(() => {
     Animated.timing(fadeAnim, {
@@ -37,17 +36,16 @@ const FadeInView = props => {
 
   return (
     <View className="flex-1" style={{backgroundColor: props.backgroundColor}}>
-      <Animated.View // Special animatable View
+      <Animated.View
         style={{
           flex: 1,
           marginLeft: props.isHome ? 0 : 16,
-          // marginRight: props.isHome ? 16 : 0,
           transform: [
             {
               translateX: viewRef,
             },
           ],
-          opacity: fadeAnim, // Bind opacity to animated value
+          opacity: fadeAnim,
         }}>
         {props.children}
       </Animated.View>

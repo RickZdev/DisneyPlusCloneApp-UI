@@ -1,5 +1,4 @@
 import {View, Text, FlatList, Image} from 'react-native';
-import React from 'react';
 
 const MovieList = ({data, title}) => {
   return (
@@ -10,15 +9,19 @@ const MovieList = ({data, title}) => {
         keyExtractor={item => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
-        renderItem={({item}) => <MovieCard data={item} />}
+        renderItem={({item, index}) => (
+          <MovieCard data={item} index={index} lastIndex={data.length - 1} />
+        )}
       />
     </View>
   );
 };
 
-const MovieCard = ({data}) => {
+const MovieCard = ({data, index, lastIndex}) => {
   return (
-    <View className="w-28 h-40 mr-1 rounded-md overflow-hidden">
+    <View
+      className="w-28 h-40 rounded-md overflow-hidden mr-6"
+      style={{marginRight: index === lastIndex ? 24 : 4}}>
       <Image
         source={data.moviePoster}
         resizeMode="cover"

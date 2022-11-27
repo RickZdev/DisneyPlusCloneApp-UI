@@ -3,8 +3,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import BottomTab from './BottomTab';
 import ProfileTab from '../screens/ProfileTab';
 import SearchTab from '../screens/SearchTab';
-import SampleScreen from '../screens/SampleScreen';
-import HomeTab from '../screens/HomeTab';
 
 const Stack = createStackNavigator();
 
@@ -28,11 +26,6 @@ const SearchStack = () => {
       <Stack.Screen
         name="SearchTab"
         component={SearchTab}
-        options={{presentation: 'modal'}}
-      />
-      <Stack.Screen
-        name="SampleScreen"
-        component={SampleScreen}
         options={{presentation: 'modal'}}
       />
     </Stack.Navigator>
